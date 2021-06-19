@@ -1,24 +1,13 @@
 import { VFC, useState, useEffect } from 'react';
 import { axiosInstance } from '@src/helper';
-import { requests } from '@src/configs';
+import { requests,baseURL } from '@src/configs';
 import { AspectRatio } from '@src/components/AspectRatio';
-
-//画像のベースurl
-const baseURL = 'https://image.tmdb.org/t/p/original' as const;
+import {Movie} from "@src/components/type";
 
 type RowPropsType = {
   title: string;
   fetchUrl: typeof requests[keyof typeof requests];
   large?: boolean;
-};
-
-type Movie = {
-  id: string;
-  name: string;
-  title: string;
-  original_name: string;
-  poster_path: string;
-  backdrop_path: string;
 };
 
 export const Row: VFC<RowPropsType> = ({ title, fetchUrl, large = false }) => {
