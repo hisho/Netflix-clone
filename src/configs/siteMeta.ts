@@ -1,7 +1,7 @@
 export const siteMeta = {
-  name: 'サイトのタイトル',
-  description: 'サイトの説明文',
+  name: 'netflix clone',
+  description: 'netflix app clone',
   lang: 'ja',
-  siteUrl: 'https://next-template.netlify.app',
+  siteUrl: 'https://hisho-netflix-clone.netlify.app',
   locale: 'ja_JP',
 } as const;

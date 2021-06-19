@@ -8,7 +8,7 @@ export const pages = [
   },
   {
     page_id: '1',
-    title: 'トップページ',
+    title: '',
     path: '/',
   },
   {
