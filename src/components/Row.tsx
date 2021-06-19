@@ -1,8 +1,8 @@
 import { VFC, useState, useEffect } from 'react';
 import { axiosInstance } from '@src/helper';
-import { requests,baseURL } from '@src/configs';
+import { requests, baseURL } from '@src/configs';
 import { AspectRatio } from '@src/components/AspectRatio';
-import {Movie} from "@src/components/type";
+import { Movie } from '@src/components/type';
 
 type RowPropsType = {
   title: string;
