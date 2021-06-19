@@ -17,6 +17,7 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     variants: {
       extend: {
+        scale: ['group-hover'],
         fill: [
           'responsive',
           'group-hover',
