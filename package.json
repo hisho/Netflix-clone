@@ -24,6 +24,7 @@
     "view:tailwind": "tailwind-config-viewer -o -p 7777"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.1",
     "axios": "^0.21.1",
     "next": "11.0.0",
     "next-seo": "^4.26.0",

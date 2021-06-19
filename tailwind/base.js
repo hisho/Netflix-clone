@@ -24,5 +24,6 @@ module.exports = {
     plugin(({ addComponents }) => {
       addComponents(myComponents);
     }),
+    require('@tailwindcss/line-clamp'),
   ],
 };
