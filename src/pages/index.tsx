@@ -10,8 +10,7 @@ const Page: VFC = () => {
     <PageContext.Provider value={currentPage}>
       <Layout>
         <Head />
-        top page
-        <img src="/vercel.svg" alt="" />
+
       </Layout>
     </PageContext.Provider>
   );
