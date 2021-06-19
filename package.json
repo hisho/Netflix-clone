@@ -1,0 +1,58 @@
+{
+  "name": "next-template",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "preinstall": "npx check-engines && npx only-allow npm",
+    "start": "run-p next-dev open",
+    "build": "run-s next-build next-start",
+    "serve": "run-s export server",
+    "export": "run-s next-build next-export",
+    "lint": "run-s next-lint prettier",
+    "open": "open http://localhost:3000",
+    "next-dev": "next dev",
+    "next-build": "next build",
+    "next-start": "next start",
+    "next-lint": "next lint --dir src --fix",
+    "next-export": "next export",
+    "server": "browser-sync start --config ./bs-config.js",
+    "prettier": "prettier --write './src/**/*.{ts,tsx}'",
+    "view:tailwind": "tailwind-config-viewer -o -p 7777"
+  },
+  "dependencies": {
+    "next": "11.0.0",
+    "next-seo": "^4.26.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tailwindcss": "^2.2.2",
+    "what-input": "^5.2.10"
+  },
+  "devDependencies": {
+    "@hisho/reset.css": "^1.0.1",
+    "@types/browser-sync": "^3001.0.28-alpha",
+    "@types/eslint": "^7.2.13",
+    "@types/node": "^15.12.4",
+    "@types/postcss-import": "^12.0.0",
+    "@types/postcss-nested": "^4.2.3",
+    "@types/prettier": "^2.3.0",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "autoprefixer": "^10.2.6",
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.5",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.5",
+    "prettier": "^2.3.1",
+    "tailwind-config-viewer": "^1.6.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  }
+}
