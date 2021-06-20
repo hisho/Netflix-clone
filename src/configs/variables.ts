@@ -8,7 +8,7 @@ export const variables = {
   },
   colors: {
     primary: {
-      black: '#3B4043',
+      black: '#111',
       red: '#f00',
       brown: '#5F5538',
       gray: '#E3E1DA',
