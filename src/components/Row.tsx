@@ -1,5 +1,4 @@
 import { VFC, useState } from 'react';
-import { axiosInstance } from '@src/helper';
 import { requests, baseURL } from '@src/configs';
 import { AspectRatio } from '@src/components/AspectRatio';
 import { Movie } from '@src/components/type';
@@ -41,11 +40,11 @@ export const Row: VFC<RowPropsType> = ({ title, fetchUrl, large = false }) => {
     setTrailerUrl(null);
     try {
       //動画を取得する
-      const response = await axiosInstance.get(
-        `/movie/${movie.id}/videos?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`
-      );
+      // const response = await axiosInstance.get(
+      //   `/movie/${movie.id}/videos?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`
+      // );
       //動画の配列の0番目のkeyにYouTubeのidが入っているので代入する
-      setTrailerUrl(response.data.results[0]?.key ?? null);
+      // setTrailerUrl(response.data.results[0]?.key ?? null);
     } catch (error) {
       console.error(error);
     }
