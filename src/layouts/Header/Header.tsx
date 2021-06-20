@@ -25,7 +25,7 @@ export const Header: VFC<HeaderPropsType> = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 backdrop-filter backdrop-blur-sm transition-colors duration-500 bg-black shadow-md ${
+      className={`fixed top-0 inset-x-0 z-50 backdrop-filter backdrop-blur-sm transition-colors duration-500 bg-primary-black shadow-md ${
         intersection ? 'bg-opacity-100' : 'bg-opacity-0'
       }`}
     >
