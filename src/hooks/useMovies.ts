@@ -34,9 +34,8 @@ export const useMovies: useMoviesType = (fetchUrl) => {
   //moviesのdataを取得する
   useEffect(() => {
     (async () => {
-      const request = await axiosInstance.get(fetchUrl);
-      //TODO asをなくす
-      const results = request.data.results as Movie[];
+      const request = await axiosInstance.get<{results: Movie[]}>(fetchUrl);
+      const results = request.data.results;
       setMovies(results);
       //ランダムの部分は切り出し
       setMovie(results[Math.floor(Math.random() * results.length - 1)])
