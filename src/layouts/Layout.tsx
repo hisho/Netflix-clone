@@ -11,7 +11,9 @@ export const Layout: VFC<LayoutPropsType> = ({ children }) => {
     <>
       <Header />
       <Hero />
-      <main className={`wrapper`}>{children}</main>
+      <main className="px-5 py-20 sm:px-10 sm;py-40">
+        {children}
+      </main>
       <Footer />
     </>
   );
