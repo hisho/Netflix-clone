@@ -24,7 +24,7 @@ export const useSEO: useSEOFunctionType = ({
   const siteMetaData = useSiteMeta();
   const isTopPage = page_id === '1';
   const pageTitle = isTopPage
-    ? siteMetaData.name + ' | ' + title
+    ? siteMetaData.name
     : title + ' | ' + siteMetaData.name;
   const pageDescription = description ? description : siteMetaData.description;
   const pagePath = siteMetaData.siteUrl + path;
