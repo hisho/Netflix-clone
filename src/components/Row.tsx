@@ -1,9 +1,10 @@
-import { VFC, useState, useEffect } from 'react';
+import { VFC, useState } from 'react';
 import { axiosInstance } from '@src/helper';
 import { requests, baseURL } from '@src/configs';
 import { AspectRatio } from '@src/components/AspectRatio';
 import { Movie } from '@src/components/type';
 import YouTube from 'react-youtube';
+import {useMovies} from "@src/hooks/useMovies";
 
 type RowPropsType = {
   title: string;
@@ -30,18 +31,9 @@ const opts: Options = {
 };
 
 export const Row: VFC<RowPropsType> = ({ title, fetchUrl, large = false }) => {
-  //TODO hooksに切り出し
   //movieのdataを管理する配列
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const {movies} = useMovies(fetchUrl);
   const [trailerUrl, setTrailerUrl] = useState<string | null>(null);
-
-  //movieのdataを取得する
-  useEffect(() => {
-    (async () => {
-      const request = await axiosInstance.get(fetchUrl);
-      setMovies(request.data.results);
-    })();
-  }, [fetchUrl]);
 
   //画像をclickする時の関数
   const handleClick = async (movie: Movie) => {

@@ -1,38 +1,11 @@
-import { VFC, useState, useEffect } from 'react';
-import { Movie } from '@src/components/type';
+import { VFC } from 'react';
 import { baseURL, requests } from '@src/configs';
-import { axiosInstance } from '@src/helper';
+import {useMovies} from "@src/hooks/useMovies";
 
 type HeroPropsType = {};
 
 export const Hero: VFC<HeroPropsType> = () => {
-  //とりあえず初期値を入力しておく
-  //TODO リファクタリング
-  const [movie, setMovie] = useState<Movie>({
-    id: '',
-    name: '',
-    title: '',
-    original_name: '',
-    poster_path: '',
-    backdrop_path: '',
-    overview: '',
-  });
-
-  //movieのdataを取得する
-  //TODO hooksに切り出す
-  useEffect(() => {
-    (async () => {
-      const request = await axiosInstance.get(requests.fetchNetflixOriginals);
-
-      //TODO asをなくす
-      const results = request.data.results as Movie[];
-      //配列からランダムな値を一つ返す
-      //TODO 関数切り出し
-      const randomData =
-        results[Math.floor(Math.random() * results.length - 1)];
-      setMovie(randomData);
-    })();
-  }, []);
+  const {movie} = useMovies(requests.fetchNetflixOriginals);
 
   return (
     <div className="h-105 relative overflow-hidden text-white">
