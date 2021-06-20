@@ -1,6 +1,6 @@
 import {useEffect, useState, Dispatch, SetStateAction} from "react";
 import {Movie} from "@src/components/type";
-import {axiosInstance} from "@src/helper";
+import axios from 'axios';
 import {requests} from '@src/configs';
 
 type useMoviesType = (
@@ -10,6 +10,12 @@ type useMoviesType = (
   movie: Movie,
   setMovies: Dispatch<SetStateAction<Movie[]>>
 }
+
+//themoviedbを固定したaxiosのinstance
+const axiosInstance = axios.create({
+  baseURL: 'https://api.themoviedb.org/3',
+});
+
 
 export const useMovies: useMoviesType = (fetchUrl) => {
   //動画の情報が入った配列
