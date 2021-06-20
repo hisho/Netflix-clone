@@ -35,7 +35,7 @@ export const Hero: VFC<HeroPropsType> = () => {
   }, []);
 
   return (
-    <div className="h-96 relative overflow-hidden text-white">
+    <div className="h-105 relative overflow-hidden text-white">
       <img
         className="absolute inset-0 h-full object-cover object-center z-10"
         aria-hidden={true}
@@ -73,7 +73,7 @@ export const Hero: VFC<HeroPropsType> = () => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-0 z-30 h-1/3 bg-gradient-to-b from-transparent to-black" />
+      <div className="absolute inset-x-0 bottom-0 z-30 h-1/3 bg-gradient-to-b from-transparent to-primary-black" />
     </div>
   );
 };
