@@ -1,6 +1,6 @@
 import { VFC } from 'react';
 import { Layout, Head } from '@src/layouts';
-import {Row, Spacer} from '@src/components';
+import { Row, Spacer } from '@src/components';
 import { requests } from '@src/configs';
 import { PageContext } from '@src/store';
 import { usePageReducer } from '@src/hooks';
