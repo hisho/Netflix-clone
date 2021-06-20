@@ -1,5 +1,6 @@
 import '@hisho/reset.css';
 import '@src/styles/globals.css';
+import '@src/styles/tailwind.css';
 import { VFC } from 'react';
 import { AppProps } from 'next/app';
 import 'what-input';
