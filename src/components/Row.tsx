@@ -59,8 +59,8 @@ export const Row: VFC<RowPropsType> = ({title, fetchUrl, large = false}) => {
 
     return (
       <section className="text-white">
-        <h2 className="">{title}</h2>
-        <div className="mt-5">
+        <h2 className="text-20 font-bold sm:text-32">{title}</h2>
+        <div className="mt-5 sm:mt-10">
           <ul className="overflow-x-auto flex gap-x-5">
             {movies.map((movie, index) => (
               <li
