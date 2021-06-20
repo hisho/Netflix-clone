@@ -85,7 +85,12 @@ export const Row: VFC<RowPropsType> = ({title, fetchUrl, large = false}) => {
               </li>
             ))}
           </ul>
-          {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}/>}
+          {trailerUrl && (
+            <div className="relative mt-5 -mx-5 sm:mt-10 sm:mx-0 max-w-600">
+              <AspectRatio width={16} height={9} />
+              <YouTube className="absolute inset-0 w-full h-full" videoId={trailerUrl} opts={opts}/>
+            </div>
+          )}
         </div>
       </section>
     );
